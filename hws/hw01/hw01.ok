@@ -1,0 +1,25 @@
+{
+    "name": "Homework 1",
+    "endpoint": "cal/cs61a/su20/hw01",
+    "src": [
+        "hw01.py"
+    ],
+    "tests": {
+        "hw*.py": "doctest",
+        "tests/*.py": "ok_test"
+    },
+    "default_tests": [
+        "a_plus_abs_b",
+        "two_of_three",
+        "largest_factor",
+        "with_if_function",
+        "with_if_statement",
+        "hailstone"
+    ],
+    "protocols": [
+        "file_contents",
+        "grading",
+        "analytics",
+        "backup"
+    ]
+}

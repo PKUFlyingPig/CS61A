@@ -1,0 +1,26 @@
+{
+    "name": "Lab 1",
+    "endpoint": "cal/cs61a/su20/lab01",
+    "src": [
+        "lab01.py"
+    ],
+    "tests": {
+        "lab*.py": "doctest",
+        "tests/*.py": "ok_test"
+    },
+    "default_tests": [
+        "control",
+        "short-circuit",
+        "debugging-quiz",
+        "falling",
+        "sum_digits"
+    ],
+    "protocols": [
+        "restore",
+        "file_contents",
+        "analytics",
+        "unlock",
+        "grading",
+        "backup"
+    ]
+}
