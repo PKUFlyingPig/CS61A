@@ -7,14 +7,12 @@ test = {
         {
           'code': r"""
           >>> str_interval(interval(-1, 2))
-          5657a44e93e1e7598d0a2224aa347b8a
-          # locked
+          '-1 to 2'
           >>> str_interval(add_interval(interval(-1, 2), interval(4, 8)))
-          31c95be25607aec023bc3067fd1c77f6
-          # locked
+          '3 to 10'
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         }
       ],
       'scored': True,
