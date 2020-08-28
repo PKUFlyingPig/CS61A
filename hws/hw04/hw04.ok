@@ -1,0 +1,27 @@
+{
+    "name": "Homework 4",
+    "endpoint": "cal/cs61a/su20/hw04",
+    "src": [
+        "hw04.py"
+    ],
+    "tests": {
+        "hw*.py": "doctest",
+        "tests/*.py": "ok_test"
+    },
+    "default_tests": [
+        "total_weight",
+        "balanced",
+        "totals_tree",
+        "replace_leaf",
+        "preorder",
+        "has_path"
+    ],
+    "protocols": [
+        "restore",
+        "file_contents",
+        "unlock",
+        "grading",
+        "analytics",
+        "backup"
+    ]
+}

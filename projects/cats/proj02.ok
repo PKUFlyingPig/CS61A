@@ -1,0 +1,43 @@
+{
+    "name": "Project 2: Cats",
+    "endpoint": "cal/cs61a/su20/proj02",
+    "src": [
+        "utils.py",
+        "cats.py"
+    ],
+    "default_tests": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10"
+    ],
+    "tests": {
+        "tests/01.py": "ok_test",
+        "tests/02.py": "ok_test",
+        "tests/03.py": "ok_test",
+        "tests/04.py": "ok_test",
+        "tests/05.py": "ok_test",
+        "tests/06.py": "ok_test",
+        "tests/07.py": "ok_test",
+        "tests/08.py": "ok_test",
+        "tests/09.py": "ok_test",
+        "tests/10.py": "ok_test",
+        "tests/EC1.py": "ok_test",
+        "tests/EC2.py": "ok_test"
+    },
+    "protocols": [
+        "restore",
+        "file_contents",
+        "unlock",
+        "grading",
+        "analytics",
+        "collaborate",
+        "backup"
+    ]
+}
