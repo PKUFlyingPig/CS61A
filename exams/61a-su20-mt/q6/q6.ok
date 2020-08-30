@@ -1,0 +1,22 @@
+{
+  "name": "q6",
+  "endpoint": "cal/cs61a-exam/su20/mt_5pm_1x_q6",
+  "decryption_keypage": "https://ok-exam-key-server.apps.cs61a.org/",
+  "src": [
+    "q6.py"
+  ],
+  "tests": {
+    "tests/q6.py": "ok_test"
+  },
+  "default_tests": [
+    "q6"
+  ],
+  "protocols": [
+    "restore",
+    "file_contents",
+    "analytics",
+    "unlock",
+    "grading",
+    "backup"
+  ]
+}

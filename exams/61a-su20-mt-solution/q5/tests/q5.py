@@ -1,0 +1,35 @@
+test = {'name': 'q5',
+ 'points': 1,
+ 'suites': [{'cases': [{'code': '>>> subsaltshaker(2233) # 22 counts\n'
+                                'True\n'
+                                '\n'
+                                '>>> subsaltshaker(2444423) # 4444 counts\n'
+                                'True\n'
+                                '\n'
+                                '>>> subsaltshaker(82223) # 22 counts even if '
+                                'it appears as part of 222\n'
+                                'True\n'
+                                '\n'
+                                '>>> subsaltshaker(234562) # 2...2 does not '
+                                'count if the 2s are not consecutive\n'
+                                'False\n'
+                                '\n'
+                                '>>> subsaltshaker(1) # 1 counts\n'
+                                'True\n'
+                                '\n'
+                                '>>> subsaltshaker(498729879871) # 1 counts\n'
+                                'True\n'
+                                '\n'
+                                '>>> subsaltshaker(149872987987) # 1 counts\n'
+                                'True\n'
+                                '\n'
+                                '>>> subsaltshaker(4445555) # no saltshakers '
+                                'in this number\n'
+                                'False\n'
+                                '\n'
+                                '>>> subsaltshaker(20) # no saltshakers in '
+                                'this number\n'
+                                'False\n'}],
+             'scored': True,
+             'setup': 'from q5 import *',
+             'type': 'doctest'}]}

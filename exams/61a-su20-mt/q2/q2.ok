@@ -1,0 +1,22 @@
+{
+  "name": "q2",
+  "endpoint": "cal/cs61a-exam/su20/mt_5pm_1x_q2",
+  "decryption_keypage": "https://ok-exam-key-server.apps.cs61a.org/",
+  "src": [
+    "q2.py"
+  ],
+  "tests": {
+    "tests/q2.py": "ok_test"
+  },
+  "default_tests": [
+    "q2"
+  ],
+  "protocols": [
+    "restore",
+    "file_contents",
+    "analytics",
+    "unlock",
+    "grading",
+    "backup"
+  ]
+}

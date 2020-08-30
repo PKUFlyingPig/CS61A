@@ -23,12 +23,12 @@ def make_guess(n):
     """
     def update_guess(num_incorrect):
         def new_guess(x):
-            if ______:
-                ______
+            if x == n:
+                return num_incorrect
             else:
-                ______
-        ______
-    return ______
+                return update_guess(num_incorrect + 1)
+        return new_guess
+    return update_guess(0)
 
 # ORIGINAL SKELETON FOLLOWS
 

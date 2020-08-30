@@ -1,0 +1,31 @@
+{
+    "name": "Lab 8",
+    "endpoint": "cal/cs61a/su20/lab08",
+    "src": [
+        "lab08.py",
+        "classes.py"
+    ],
+    "tests": {
+        "lab*.py": "doctest",
+        "tests/*.py": "ok_test",
+        "classes.py": "doctest"
+    },
+    "default_tests": [
+        "iterators",
+        "make_generators_generator",
+        "wwpd-car",
+        "Card.__init__",
+        "Card.power",
+        "Player.__init__",
+        "Player.draw",
+        "Player.play"
+    ],
+    "protocols": [
+        "restore",
+        "file_contents",
+        "unlock",
+        "grading",
+        "analytics",
+        "backup"
+    ]
+}

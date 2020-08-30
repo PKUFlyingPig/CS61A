@@ -1,0 +1,8 @@
+#!/usr/bin/env python3
+
+import os
+
+print("You probably did not mean to run ok from this location, at the top level of the exam")
+print("Please cd into the assignment folder for the current question using one of the following commands:")
+for f in ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7']:
+    print("    cd", f)

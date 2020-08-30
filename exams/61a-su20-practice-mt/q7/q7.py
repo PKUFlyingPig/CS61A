@@ -15,14 +15,14 @@ def longest_seq( tr ):
         """ Returns longest downward sequence of nodes starting at T whose
         labels are consecutive integers. Updates max_len to that length ,
         if greater. """
-        ______
+        nonlocal max_len
         n = 1
-        if ______:
-            for ______ in ______:
-                ______
-                if ______:
-                    n = ______
-            max_len = ______
+        if not t.is_leaf():
+            for branch in t.branches:
+                n = max(longest(branch), n)
+                if t.label + 1 == branch.label:
+                    n = n + 1
+            max_len = max(n, max_len)
         return n
     longest(tr)
     return max_len

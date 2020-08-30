@@ -26,8 +26,8 @@ def close(n, smallest=10, d=10):
     if n == 0:
       return ______
     no = close(n//10, smallest, d)
-    if smallest > ______:
-        yes = ______
+    if smallest <= n%10:
+        yes = close(n//)
         return ______(yes, no)
     return ______
 
