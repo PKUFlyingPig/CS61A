@@ -7,56 +7,50 @@ test = {
         {
           'code': r"""
           >>> free_bacon(4)
-          327b19ffebddf93982e1ad2a4a6486f4
-          # locked
+          6
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
           >>> free_bacon(1)
-          872dbe4a4fe5d8451aa842c21194c866
-          # locked
+          9
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
           >>> free_bacon(20)
-          671d8bd6086d56a4f19cc0d378631021
-          # locked
+          12
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
           >>> free_bacon(45)
-          872dbe4a4fe5d8451aa842c21194c866
-          # locked
+          9
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
           >>> free_bacon(15)
-          327b19ffebddf93982e1ad2a4a6486f4
-          # locked
+          6
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
           >>> free_bacon(13)
-          2aef307e1e3d3bb468f74013a49eb977
-          # locked
+          8
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""

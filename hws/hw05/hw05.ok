@@ -1,0 +1,25 @@
+{
+    "name": "Homework 5",
+    "endpoint": "cal/cs61a/su20/hw05",
+    "src": [
+        "hw05.py"
+    ],
+    "tests": {
+        "hw*.py": "doctest",
+        "tests/*.py": "ok_test"
+    },
+    "default_tests": [
+        "make_withdraw",
+        "make_bank",
+        "repeated",
+        "merge"
+    ],
+    "protocols": [
+        "restore",
+        "file_contents",
+        "analytics",
+        "unlock",
+        "grading",
+        "backup"
+    ]
+}

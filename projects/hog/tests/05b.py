@@ -19,42 +19,36 @@ test = {
           ...   strat0, strat1, score0=0, score1=0, goal=21,
           ...   dice=hog.make_test_dice(2, 2, 3, 4, 2, 2, 2, 2, 2, 3, 5, 2, 2, 2, 2, 2, 2, 2, 6, 1))
           >>> s0
-          c9aafaf9e2f44280bbf2939583de79b0
-          # locked
+          43
           >>> s1
-          af0b3285304485122429774c0ea3182a
-          # locked
+          15
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
           >>> # example 2
           >>> s0, s1 = hog.play(always(2), always(1), score0=0, score1=0, goal=5, dice=hog.make_test_dice(2, 2))
           >>> s0
-          c42887e7b9ffe8fc26bb57b61329f916
-          # locked
+          7
           >>> s1
-          962aea5f59fc55bd65ccacf4603c8f22
-          # locked
+          0
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
           >>> # swap after feral hogs
           >>> s0, s1 = hog.play(always(2), always(1), score0=17, score1=6, goal=21, dice=hog.make_test_dice(1, 2))
           >>> s0
-          6790f7070fa643e868f99363486b6275
-          # locked
+          21
           >>> s1
-          327b19ffebddf93982e1ad2a4a6486f4
-          # locked
+          6
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         }
       ],
       'scored': True,

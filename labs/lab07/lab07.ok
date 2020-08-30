@@ -1,0 +1,26 @@
+{
+    "name": "Lab 7",
+    "endpoint": "cal/cs61a/su20/lab07",
+    "src": [
+        "lab07.py"
+    ],
+    "tests": {
+        "lab*.py": "doctest",
+        "tests/*.py": "ok_test"
+    },
+    "default_tests": [
+        "subseqs",
+        "inc_subseqs",
+        "make_glookup",
+        "trade",
+        "reverse"
+    ],
+    "protocols": [
+        "restore",
+        "file_contents",
+        "unlock",
+        "grading",
+        "analytics",
+        "backup"
+    ]
+}

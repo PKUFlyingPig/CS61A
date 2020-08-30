@@ -1,0 +1,22 @@
+{
+  "name": "q6",
+  "endpoint": "cal/okpy-test/su00/practice_midterm_1_q6",
+  "decryption_keypage": "https://ok-exam-key-server.apps.cs61a.org/",
+  "src": [
+    "q6.py"
+  ],
+  "tests": {
+    "tests/q6.py": "ok_test"
+  },
+  "default_tests": [
+    "q6"
+  ],
+  "protocols": [
+    "restore",
+    "file_contents",
+    "analytics",
+    "unlock",
+    "grading",
+    "backup"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+    "name": "Lab 6",
+    "endpoint": "cal/cs61a/su20/lab06",
+    "src": [
+        "lab06.py"
+    ],
+    "tests": {
+        "lab*.py": "doctest",
+        "tests/*.py": "ok_test"
+    },
+    "default_tests": [
+        "make_adder_inc",
+        "make_fib",
+        "insert_items",
+        "list-mutation"
+    ],
+    "protocols": [
+        "restore",
+        "file_contents",
+        "unlock",
+        "grading",
+        "analytics",
+        "backup"
+    ]
+}
