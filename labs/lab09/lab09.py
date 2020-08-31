@@ -8,6 +8,10 @@ def convert_link(link):
     []
     """
     "*** YOUR CODE HERE ***"
+    if not link:
+        return []
+    else:
+        return [link.first] + convert_link(link.rest)
 
 
 def every_other(s):
@@ -28,6 +32,11 @@ def every_other(s):
     Link(4)
     """
     "*** YOUR CODE HERE ***"
+    if s == Link.empty or s.rest == Link.empty:
+        return
+    s.rest = s.rest.rest
+    return every_other(s.rest)
+
 
 
 def label_squarer(t):
@@ -39,6 +48,11 @@ def label_squarer(t):
     Tree(1, [Tree(9, [Tree(25)]), Tree(49)])
     """
     "*** YOUR CODE HERE ***"
+    t.label = t.label**2
+    if t.is_leaf():
+        return 
+    for b in t.branches:
+        label_squarer(b)
 
 
 def cumulative_mul(t):
@@ -51,6 +65,15 @@ def cumulative_mul(t):
     Tree(105, [Tree(15, [Tree(5)]), Tree(7)])
     """
     "*** YOUR CODE HERE ***"
+    if t.is_leaf():
+        return t.label
+    for b in t.branches:
+        cumulative_mul(b)
+    cumu_mul = t.label
+    for b in t.branches:
+        cumu_mul *= b.label
+    t.label = cumu_mul
+
 
 
 def has_cycle(link):
@@ -68,6 +91,14 @@ def has_cycle(link):
     False
     """
     "*** YOUR CODE HERE ***"
+    p = link
+    while p != Link.empty:
+        p = p.rest
+        if p is link:
+            return True
+    return False
+
+
 
 def has_cycle_constant(link):
     """Return whether link contains a cycle.
@@ -81,6 +112,12 @@ def has_cycle_constant(link):
     False
     """
     "*** YOUR CODE HERE ***"
+    p = link
+    while p != Link.empty:
+        p = p.rest
+        if p is link:
+            return True
+    return False
 
 
 def reverse_other(t):
@@ -97,6 +134,17 @@ def reverse_other(t):
     Tree(1, [Tree(8, [Tree(3, [Tree(5), Tree(4)]), Tree(6, [Tree(7)])]), Tree(2)])
     """
     "*** YOUR CODE HERE ***"
+    if t.is_leaf():
+        return 
+    label_list = []
+    for b in t.branches:
+        label_list.append(b.label)
+    for b, new_label in zip(t.branches, reversed(label_list)):
+        b.label = new_label
+        for bb in b.branches:
+            reverse_other(bb)
+
+
 
 
 class Link:
