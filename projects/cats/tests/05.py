@@ -8,30 +8,23 @@ test = {
           'code': r"""
           >>> abs_diff = lambda w1, w2, limit: abs(len(w2) - len(w1))
           >>> autocorrect("cul", ["culture", "cult", "cultivate"], abs_diff, 10)
-          4ad08cc6f59bb491e941db9c72f1fd60
-          # locked
+          'cult'
           >>> autocorrect("cul", ["culture", "cult", "cultivate"], abs_diff, 0)
-          b0f43e0c0b1c27c73406a6049e481fc4
-          # locked
+          'cul'
           >>> autocorrect("wor", ["worry", "car", "part"], abs_diff, 10)
-          d8b4ec357e19beec26a2624c4a53a35e
-          # locked
+          'car'
           >>> first_diff = lambda w1, w2, limit: 1 if w1[0] != w2[0] else 0
           >>> autocorrect("wrod", ["word", "rod"], first_diff, 1)
-          7d015c6a6a2cb22a8ce6cb7b25d855d8
-          # locked
+          'word'
           >>> autocorrect("inside", ["idea", "inside"], first_diff, 0.5)
-          51b528ba30b8f4bf38b6e08ae064a4b3
-          # locked
+          'inside'
           >>> autocorrect("inside", ["idea", "insider"], first_diff, 0.5)
-          26d0235ab01545412019b455ff142516
-          # locked
+          'idea'
           >>> autocorrect("outside", ["idea", "insider"], first_diff, 0.5)
-          09b04681a750c56377719aed63ffc997
-          # locked
+          'outside'
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""

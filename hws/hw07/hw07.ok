@@ -1,0 +1,28 @@
+{
+    "name": "Homework 7",
+    "endpoint": "cal/cs61a/su20/hw07",
+    "src": [
+        "hw07.scm"
+    ],
+    "tests": {
+        "tests/*.py": "ok_test"
+    },
+    "default_tests": [
+        "cadr-caddr",
+        "unique",
+        "sign",
+        "pow",
+        "replicate",
+        "accumulate",
+        "accumulate-tail",
+        "list-comp"
+    ],
+    "protocols": [
+        "restore",
+        "file_contents",
+        "grading",
+        "analytics",
+        "unlock",
+        "backup"
+    ]
+}

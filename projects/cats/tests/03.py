@@ -7,41 +7,30 @@ test = {
         {
           'code': r"""
           >>> accuracy("12345", "12345") # Returns 100.0
-          29b153c9e33f1f3e87e909e781b23549
-          # locked
+          100.0
           >>> accuracy("a b c", "a b c")
-          29b153c9e33f1f3e87e909e781b23549
-          # locked
+          100.0
           >>> accuracy("a  b  c  d", "b  a  c  d")
-          e790dcd7d02c731a14852c9762530dff
-          # locked
+          50.0
           >>> accuracy("a b", "c d e")
-          c724dae4a49e254e46460a5c2ce9f821
-          # locked
+          0.0
           >>> accuracy("Cat", "cat") # the function is case-sensitive
-          c724dae4a49e254e46460a5c2ce9f821
-          # locked
+          0.0
           >>> accuracy("a b c d", " a d ")
-          7cbad8c4359bad70d88711ccbdb3b0d5
-          # locked
+          25.0
           >>> accuracy("abc", " ")
-          c724dae4a49e254e46460a5c2ce9f821
-          # locked
+          0.0
           >>> accuracy(" a b \tc" , "a b c") # Tabs don't count as words
-          29b153c9e33f1f3e87e909e781b23549
-          # locked
+          100.0
           >>> accuracy("abc", "")
-          c724dae4a49e254e46460a5c2ce9f821
-          # locked
+          0.0
           >>> accuracy("", "abc")
-          c724dae4a49e254e46460a5c2ce9f821
-          # locked
+          0.0
           >>> accuracy("cats.", "cats") # punctuation counts
-          c724dae4a49e254e46460a5c2ce9f821
-          # locked
+          0.0
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""

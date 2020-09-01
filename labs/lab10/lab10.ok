@@ -1,0 +1,24 @@
+{
+    "name": "Lab 10",
+    "endpoint": "cal/cs61a/su20/lab10",
+    "src": [
+        "lab10.scm"
+    ],
+    "tests": {
+        "tests/*.py": "ok_test"
+    },
+    "default_tests": [
+        "wwsd_lists",
+        "over_or_under",
+        "filter_lst",
+        "make_adder"
+    ],
+    "protocols": [
+        "restore",
+        "file_contents",
+        "unlock",
+        "grading",
+        "analytics",
+        "backup"
+    ]
+}

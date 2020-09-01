@@ -7,17 +7,14 @@ test = {
         {
           'code': r"""
           >>> wpm("12345", 3) # Note: wpm returns a float (with a decimal point)
-          5485098d846efd1237dc20fdb29a01fa
-          # locked
+          20.0
           >>> wpm("a b c", 20)
-          460b2564f15d069fcef9d2d39a83d810
-          # locked
+          3.0
           >>> wpm("", 10)
-          c724dae4a49e254e46460a5c2ce9f821
-          # locked
+          0.0
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
