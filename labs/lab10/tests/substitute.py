@@ -7,17 +7,14 @@ test = {
         {
           'code': r"""
           scm> (substitute '(c a b) 'b 'l)
-          4c9459fc195a9be9473e6e88ccc7290a
-          # locked
+          (c a l)
           scm> (substitute '(f e a r s) 'f 'b)
-          2ee4fbd036cdbc671b4e6b41c2e0afb6
-          # locked
+          (b e a r s)
           scm> (substitute '(g (o) o (o)) 'o 'r)
-          cbcc936cd8bb7cbc04e33191a50c9349
-          # locked
+          (g (r) r (r))
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""

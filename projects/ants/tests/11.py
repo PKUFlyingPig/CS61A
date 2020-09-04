@@ -5,7 +5,7 @@ test = {
     {
       'cases': [
         {
-          'answer': '9bc4c1f8c64f8980fa7a81c950465b76',
+          'answer': 'If the insect is not watersafe, its armor is reduced to 0. Otherwise, nothing happens.',
           'choices': [
             r"""
             If the insect is not watersafe, its armor is reduced to 0.
@@ -16,11 +16,11 @@ test = {
             'The insect goes for a swim.'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'What happens when an insect is added to a Water Place?'
         },
         {
-          'answer': '2e6b10035e4097a1b15121e4b5b75e12',
+          'answer': 'class, all ants of a subclass should either be watersafe or not',
           'choices': [
             'class, all ants of a subclass should either be watersafe or not',
             'class, all ants should be watersafe',
@@ -28,11 +28,11 @@ test = {
             'instance, the is_watersafe attribute depends on the given place of an ant'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'What type of attribute should "is_watersafe" be?'
         },
         {
-          'answer': '127cd87858e6c0a9f29f199fb2e2be0a',
+          'answer': 'reduce_armor, in the Insect class',
           'choices': [
             'reduce_armor, in the Insect class',
             'remove_insect, in the Place class',
@@ -40,7 +40,7 @@ test = {
             'remove_ant, in the GameState class'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': r"""
           What method deals damage to an Insect and removes it from its place
           if its armor reaches 0?

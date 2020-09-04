@@ -7,26 +7,22 @@ test = {
         {
           'code': r"""
           scm> (no-repeats (list 5 4 2))
-          e890e0e2fbc80b2e2b098090f4e8fbc6
-          # locked
+          (5 4 2)
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
           scm> (no-repeats (list 5 4 5 4 2 2))
-          e890e0e2fbc80b2e2b098090f4e8fbc6
-          # locked
+          (5 4 2)
           scm> (no-repeats (list 5 5 5 5 5))
-          836a86d16d8ecabf939b358782c6624c
-          # locked
+          (5)
           scm> (no-repeats ())
-          5d4e7085bcd945f8a26f87865c684069
-          # locked
+          ()
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""

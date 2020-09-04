@@ -5,7 +5,7 @@ test = {
     {
       'cases': [
         {
-          'answer': '80f6dfebbb21c78163b8aa9dc8abbe28',
+          'answer': 'ScubaThrower',
           'choices': [
             'ScubaThrower',
             'Ant',
@@ -13,11 +13,11 @@ test = {
             'GameState'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'What class does QueenAnt inherit from?'
         },
         {
-          'answer': 'ec203a8bd48f4369ee6fc9a03ffdbfcc',
+          'answer': 'The first QueenAnt that is instantiated',
           'choices': [
             'The first QueenAnt that is instantiated',
             'The second QueenAnt that is instantiated',
@@ -25,11 +25,11 @@ test = {
             'All QueenAnt instances are true QueenAnts'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'Which QueenAnt instance is the true QueenAnt?'
         },
         {
-          'answer': '5b60299a3505c6a816e3f5d6d44fa408',
+          'answer': 'Its armor is reduced to 0 upon taking its first action',
           'choices': [
             'Its armor is reduced to 0 upon taking its first action',
             'Nothing, the game ends',
@@ -37,14 +37,14 @@ test = {
             'It doubles the damage of all the ants behind it'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': r"""
           What happens to any QueenAnt instance that is instantiated after the
           first one?
           """
         },
         {
-          'answer': '7f1e876193ad01466bb1f843c9a17b72',
+          'answer': "Attacks the nearest bee and doubles the damage of all the ants behind her (that haven't already been doubled)",
           'choices': [
             r"""
             Attacks the nearest bee and doubles the damage of all the ants
@@ -64,11 +64,11 @@ test = {
             """
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'What does the true QueenAnt do each turn?'
         },
         {
-          'answer': 'a753f5e0cf5cd82c878a589f863e2e48',
+          'answer': 'If a Bee reaches the end of a tunnel or the true QueenAnt dies',
           'choices': [
             'If a Bee reaches the end of a tunnel or the true QueenAnt dies',
             'If there are no ants left in the colony',
@@ -76,7 +76,7 @@ test = {
             'If a Bee attacks the true QueenAnt'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'Under what circumstances do Bees win the game?'
         }
       ],
@@ -89,15 +89,13 @@ test = {
           'code': r"""
           >>> # Testing QueenAnt parameters
           >>> QueenAnt.food_cost
-          7cd035adf49fc93a635b4e8bb2e28bd4
-          # locked
+          7
           >>> queen = QueenAnt()
           >>> queen.armor
-          d89cf7c79d5a479b0f636734143ed5e6
-          # locked
+          1
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
@@ -465,11 +463,10 @@ test = {
           'code': r"""
           >>> from ants import *
           >>> QueenAnt.implemented
-          c7a88a0ffd3aef026b98eef6e7557da3
-          # locked
+          True
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         }
       ],
       'scored': True,

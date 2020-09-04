@@ -5,7 +5,7 @@ test = {
     {
       'cases': [
         {
-          'answer': '5fc190eff661b8759ea938b0de913597',
+          'answer': 'ThrowerAnt',
           'choices': [
             'ThrowerAnt',
             'ShortThrower',
@@ -13,11 +13,11 @@ test = {
             'Bee'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'What class do ShortThrower and LongThrower inherit from?'
         },
         {
-          'answer': '0219746f5d16f1e9137ce1d8ce1f8dd6',
+          'answer': 'There is no restriction on how far a regular ThrowerAnt can throw',
           'choices': [
             'A regular ThrowerAnt can only attack Bees at least 3 places away',
             'A regular ThrowerAnt can only attack Bees at most 3 places away',
@@ -25,11 +25,11 @@ test = {
             'There is no restriction on how far a regular ThrowerAnt can throw'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'What constraint does a regular ThrowerAnt have on its throwing distance?'
         },
         {
-          'answer': 'beea9dfab31aa4e85a6806393fa9e6ba',
+          'answer': 'A LongThrower can only attack Bees at least 5 places away',
           'choices': [
             'A LongThrower can only attack Bees at least 5 places away',
             'A LongThrower can only attack Bees at least 3 places away',
@@ -37,11 +37,11 @@ test = {
             'There is no restriction on how far a LongThrower can throw'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'What constraint does a LongThrower have on its throwing distance?'
         },
         {
-          'answer': 'cd688c2c133ce9e585711715a5b65a81',
+          'answer': 'A ShortThrower can only attack Bees at most 3 places away',
           'choices': [
             'A ShortThrower can only attack Bees at least 3 places away',
             'A ShortThrower can only attack Bees at most 3 places away',
@@ -49,11 +49,11 @@ test = {
             'There is no restriction on how far a ShortThrower can throw'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'What constraint does a ShortThrower have on its throwing distance?'
         },
         {
-          'answer': '643156e8120f86f223b6ffa5f8345c37',
+          'answer': 'The closest Bee in front of it within range',
           'choices': [
             'The closest Bee in front of it within range',
             'The closest Bee behind it within range',
@@ -61,7 +61,7 @@ test = {
             'Any Bee within range'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': r"""
           With the addition of these new ThrowerAnt subclasses, we must modify
           our definition of nearest_bee. Now what Bee should ThrowerAnts throw
@@ -78,22 +78,18 @@ test = {
           'code': r"""
           >>> # Testing Long/ShortThrower parameters
           >>> ShortThrower.food_cost
-          20d533d3e06345c8bd7072212867f2d1
-          # locked
+          2
           >>> LongThrower.food_cost
-          20d533d3e06345c8bd7072212867f2d1
-          # locked
+          2
           >>> short_t = ShortThrower()
           >>> long_t = LongThrower()
           >>> short_t.armor
-          d89cf7c79d5a479b0f636734143ed5e6
-          # locked
+          1
           >>> long_t.armor
-          d89cf7c79d5a479b0f636734143ed5e6
-          # locked
+          1
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
@@ -433,14 +429,12 @@ test = {
           'code': r"""
           >>> from ants import *
           >>> LongThrower.implemented
-          c7a88a0ffd3aef026b98eef6e7557da3
-          # locked
+          True
           >>> ShortThrower.implemented
-          c7a88a0ffd3aef026b98eef6e7557da3
-          # locked
+          True
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         }
       ],
       'scored': True,
