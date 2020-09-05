@@ -1,0 +1,26 @@
+{
+    "name": "Lab 12",
+    "endpoint": "cal/cs61a/su20/lab12",
+    "src": [
+        "lab12.py",
+        "lab12.scm"
+    ],
+    "tests": {
+        "lab*.py": "doctest",
+        "tests/*.py": "ok_test"
+    },
+    "default_tests": [
+        "wwsd-macros",
+        "wwsd-quasiquote",
+        "scheme-def",
+        "multiples_3"
+    ],
+    "protocols": [
+        "restore",
+        "file_contents",
+        "unlock",
+        "grading",
+        "analytics",
+        "backup"
+    ]
+}

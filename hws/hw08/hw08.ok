@@ -1,0 +1,27 @@
+{
+    "name": "Homework 8",
+    "endpoint": "cal/cs61a/su20/hw08",
+    "src": [
+        "hw08.sql",
+        "hw08.scm"
+    ],
+    "tests": {
+        "tests/*.py": "ok_test"
+    },
+    "default_tests": [
+        "rle",
+        "group-by-nondecreasing",
+        "size_of_dogs",
+        "by_parent_height",
+        "sentences",
+        "stacks"
+    ],
+    "protocols": [
+        "restore",
+        "file_contents",
+        "unlock",
+        "grading",
+        "analytics",
+        "backup"
+    ]
+}
