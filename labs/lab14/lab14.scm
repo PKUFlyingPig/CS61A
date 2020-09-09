@@ -13,10 +13,10 @@
 
 (define-macro (switch expr cases)
 	 (cons 'cond 
-	   (map (lambda (x) `((eq? (car ,x) ,expr) (cdr ,x))) cases)
+	   (map (lambda (case) (cons (list 'eq? expr (car case)) (cdr case))) 
+    			cases))
 )
-)
-
-(switch b ((a (print 'a))
+(define x 'b)
+(switch x ((a (print 'a))
                 (b (print 'b))
                 (c (print 'c))))

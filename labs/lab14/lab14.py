@@ -100,7 +100,22 @@ def num_splits(s, d):
     12
     """
     "*** YOUR CODE HERE ***"
-    
+    length = len(s)
+    tot = 0
+    def helper(first, second, index):
+        nonlocal tot
+        if index == length:
+            if abs(first - second) <= d:
+                tot += 1
+            return
+        else:
+            helper(first + s[index], second, index + 1)
+            helper(first, second + s[index], index + 1)
+    helper(0, 0, 0)
+    return tot//2
+
+
+
 
 
 def insert(link, value, index):

@@ -16,9 +16,9 @@ test = {
           b
           scm> (define x 'b)
           x
-          scm> (switch x ((a (print 1))
-          ....            (b (print 2))
-          ....            (c (print 3))))
+          scm> (switch x (('a (print 1))
+          ....            ('b (print 2))
+          ....            ('c (print 3))))
           2
           """,
           'hidden': False,
