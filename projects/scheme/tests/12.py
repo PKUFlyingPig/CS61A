@@ -7,32 +7,20 @@ test = {
         {
           'code': r"""
           scm> (and)
-          c65729b823194bffbccc4a162f8653bd
-          # locked
-          # choice: #t
-          # choice: #f
-          # choice: SchemeError
+          #t
           scm> (and 1 #f)
-          da859b61586947ca44e824712fd6fca4
-          # locked
-          # choice: 1
-          # choice: #t
-          # choice: #f
+          #f
           scm> (and (+ 1 1) 1)
-          eb892a26497f936d1f6cae54aacc5f51
-          # locked
+          1
           scm> (and #f 5)
-          da859b61586947ca44e824712fd6fca4
-          # locked
+          #f
           scm> (and 4 5 (+ 3 3))
-          5400bfc6a27547bf18367da950de4ddc
-          # locked
+          6
           scm> (not (and #t #f 42 (/ 1 0)))
-          c65729b823194bffbccc4a162f8653bd
-          # locked
+          #t
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
@@ -108,26 +96,20 @@ test = {
         {
           'code': r"""
           scm> (or)
-          da859b61586947ca44e824712fd6fca4
-          # locked
+          #f
           scm> (or (+ 1 1))
-          2b7cdec3904f986982cbd24a0bc12887
-          # locked
+          2
           scm> (not (or #f))
-          c65729b823194bffbccc4a162f8653bd
-          # locked
+          #t
           scm> (define (zero) 0)
-          73e4210744a96a4acadb5e250f29c530
-          # locked
+          zero
           scm> (or (zero) 3)
-          a384c59daad07475a000a57b0b47b74f
-          # locked
+          0
           scm> (or 4 #t (/ 1 0))
-          46beb7deeeb5e9af1c8d785b12558317
-          # locked
+          4
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""

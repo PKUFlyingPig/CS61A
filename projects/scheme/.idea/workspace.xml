@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9f52d4b8-a7cb-40f7-b593-c5bfedef7f86" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/questions.scm" beforeDir="false" afterPath="$PROJECT_DIR$/questions.scm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scheme.py" beforeDir="false" afterPath="$PROJECT_DIR$/scheme.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scheme_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/scheme_reader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/01.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/01.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/02.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/02.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/03.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/03.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/04.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/04.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/05.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/05.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/06.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/06.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/07.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/07.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/08.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/08.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/09.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/09.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/10.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/10.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/11.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/11.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/12.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/12.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/13.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/13.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/14.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/14.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/15.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/15.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/18.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/18.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/eval_apply.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/eval_apply.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scheme_stubbed/scheme_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/../scheme_stubbed/scheme_reader.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scheme.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="267" column="30" lean-forward="true" selection-start-line="267" selection-start-column="30" selection-end-line="267" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/scheme.iml" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="scheme" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scheme" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9f52d4b8-a7cb-40f7-b593-c5bfedef7f86" name="Default Changelist" comment="" />
+      <created>1599621949883</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599621949883</updated>
+      <workItem from="1599621961018" duration="205000" />
+      <workItem from="1599622601756" duration="102000" />
+      <workItem from="1599622768464" duration="232000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="539000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2267525" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Python Console" order="11" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/scheme.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="267" column="30" lean-forward="true" selection-start-line="267" selection-start-column="30" selection-end-line="267" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

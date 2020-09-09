@@ -7,34 +7,24 @@ test = {
         {
           'code': r"""
           >>> eval_all(Pair(2, nil), env)
-          2b7cdec3904f986982cbd24a0bc12887
-          # locked
-          # choice: 2
-          # choice: SchemeError
+          2
           >>> eval_all(Pair(4, Pair(5, nil)), env)
-          b33c0f7206201b4aaeae595493888600
-          # locked
-          # choice: 4
-          # choice: 5
-          # choice: (4 5)
-          # choice: SchemeError
+          5
           >>> eval_all(nil, env) # return None (meaning undefined)
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
           >>> lst = Pair(1, Pair(2, Pair(3, nil)))
           >>> eval_all(lst, env)
-          3c7e8a3a2176a696c3a66418f78dff6b
-          # locked
+          3
           >>> lst     # The list should not be mutated!
-          4ced98984f008e5161274d6481e4b568
-          # locked
+          Pair(1, Pair(2, Pair(3, nil)))
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         }
       ],
       'scored': True,
@@ -50,39 +40,28 @@ test = {
         {
           'code': r"""
           scm> (begin (+ 2 3) (+ 5 6))
-          20169e9f217f8370ba4f37a3cf0cc2b3
-          # locked
+          11
           scm> (begin (define x 3) x)
-          3c7e8a3a2176a696c3a66418f78dff6b
-          # locked
+          3
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
           scm> (begin 30 '(+ 2 2))
-          85d97cf58c044cc51a6a7d4315b4ad71
-          # locked
-          # choice: (+ 2 2)
-          # choice: '(+ 2 2)
-          # choice: 4
-          # choice: 30
+          (+ 2 2)
           scm> (define x 0)
-          38ba916dc1f41eb239567ee41a251ecd
-          # locked
+          x
           scm> (begin (define x (+ x 1)) 42 (define y (+ x 1)))
-          1a9a3321b8b99a0f9291d89be986e74c
-          # locked
+          y
           scm> x
-          eb892a26497f936d1f6cae54aacc5f51
-          # locked
+          1
           scm> y
-          2b7cdec3904f986982cbd24a0bc12887
-          # locked
+          2
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""

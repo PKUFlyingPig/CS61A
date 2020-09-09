@@ -1,0 +1,28 @@
+{
+    "name": "Lab 14",
+    "endpoint": "cal/cs61a/su20/lab14",
+    "src": [
+        "lab14.py",
+        "lab14.scm"
+    ],
+    "tests": {
+        "lab*.py": "doctest",
+        "tests/*.py": "ok_test"
+    },
+    "default_tests": [
+        "prune_min",
+        "split-at",
+        "align_skeleton",
+        "num_splits",
+        "insert",
+        "switch"
+    ],
+    "protocols": [
+        "restore",
+        "file_contents",
+        "unlock",
+        "grading",
+        "analytics",
+        "backup"
+    ]
+}

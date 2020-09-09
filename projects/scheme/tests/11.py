@@ -83,23 +83,19 @@ test = {
           ....   (define (inner z x)
           ....     (+ x (* y 2) (* z 3)))
           ....   (inner x 10))
-          71fe94b728b1cb1923a1c51c2533bcd8
-          # locked
+          outer
           scm> (outer 1 2)
-          5d3ec98dabcf5b4a06694ccc93722cfb
-          # locked
+          17
           scm> (define (outer-func x y)
           ....   (define (inner z x)
           ....     (+ x (* y 2) (* z 3)))
           ....   inner)
-          0b6323ff730faa1f7ac702f64f4cbfcb
-          # locked
+          outer-func
           scm> ((outer-func 1 2) 1 10)
-          5d3ec98dabcf5b4a06694ccc93722cfb
-          # locked
+          17
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""

@@ -118,6 +118,10 @@ def scheme_read(src):
         raise EOFError
     # BEGIN PROBLEM 1/2
     "*** YOUR CODE HERE ***"
+    if src.pop_first() == "nil":
+        return nil
+    elif 
+
     # END PROBLEM 1/2
 
 def read_tail(src):

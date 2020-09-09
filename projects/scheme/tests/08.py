@@ -7,14 +7,12 @@ test = {
         {
           'code': r"""
           scm> (lambda (x y) (+ x y))
-          1456de84c3edf333b6f7aee0c0624b20
-          # locked
+          (lambda (x y) (+ x y))
           scm> (lambda (x))
-          ec908af60f03727428c7ee3f22ec3cd8
-          # locked
+          SchemeError
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
@@ -46,14 +44,12 @@ test = {
           >>> lambda_line = read_line("(lambda (a b c) (+ a (* b c)))")
           >>> lambda_proc = do_lambda_form(lambda_line.rest, env)
           >>> lambda_proc.formals
-          d106bb7be6b014a9d16d74410be4a8a5
-          # locked
+          Pair('a', Pair('b', Pair('c', nil)))
           >>> lambda_proc.body # Remember that the body is a *list* of expressions!
-          3fec54ce56372bf73c4e4854aa74fc10
-          # locked
+          Pair(Pair('+', Pair('a', Pair(Pair('*', Pair('b', Pair('c', nil))), nil))), nil)
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""

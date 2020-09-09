@@ -1,0 +1,26 @@
+{
+    "name": "Homework 9",
+    "endpoint": "cal/cs61a/su20/hw09",
+    "src": [
+        "hw09.py",
+        "hw09.scm"
+    ],
+    "tests": {
+        "hw*.py": "doctest",
+        "tests/*.py": "ok_test"
+    },
+    "default_tests": [
+        "in_order_traversal",
+        "interleaved_sum",
+        "mutate_reverse",
+        "reverse-simple"
+    ],
+    "protocols": [
+        "restore",
+        "file_contents",
+        "unlock",
+        "grading",
+        "analytics",
+        "backup"
+    ]
+}
