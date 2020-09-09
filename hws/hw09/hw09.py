@@ -20,6 +20,17 @@ def in_order_traversal(t):
     [4, 2, 6, 5, 7, 1, 3]
     """
     "*** YOUR CODE HERE ***"
+    ans = []
+    def traversal(t):
+        if t.is_leaf():
+            ans.append(t.label)
+            return
+        traversal(t.branches[0])
+        ans.append(t.label)
+        traversal(t.branches[1])
+    traversal(t)
+    return ans
+
 
 
 def summation(n, term):
@@ -45,6 +56,14 @@ def interleaved_sum(n, odd_term, even_term):
     True
     """
     "*** YOUR CODE HERE ***"
+    def help(i, direction):
+        if i == n:
+            return 0
+        elif direction == 0:
+            return odd_term(i + 1) + help(i + 1, 1 - direction)
+        elif direction == 1:
+            return even_term(i + 1) + help(i + 1, 1 - direction)
+    return help(0, 0)
 
 
 def mutate_reverse(link):
@@ -61,6 +80,16 @@ def mutate_reverse(link):
     Link(3, Link(2, Link(1)))
     """
     "*** YOUR CODE HERE ***"
+    value = []
+    ptr = link
+    while ptr is not Link.empty:
+        value.append(ptr.first)
+        ptr = ptr.rest
+    ptr = link
+    while ptr is not Link.empty:
+        ptr.first = value.pop()
+        ptr = ptr.rest
+    
 
 
 class Tree:
