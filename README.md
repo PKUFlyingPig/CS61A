@@ -23,8 +23,8 @@ Mastery of a particular programming language is a very useful side effect of CS 
 
 ### Workload
 
-I spent two weeks to finish all the homework, labs and projects. If you are a fresher in coding, this lesson will be a fantastic tour for you to learn the core ideas in programming. Even if you already have some experience in programming, you will certainly learn something that you've never thought of. For me, I had a much deeper understanding of the higher order function and the use of tail recursion to optimize recursion. What's more, the [python tutor](http://pythontutor.com/composingprograms.html#mode=edit) will help you clearly understand the logic behind program frame and variable bindings.
+I spent two weeks to finish all the homework, labs and projects. If you are a fresher in coding, this lesson will be a fantastic tour for you to learn the core ideas in programming. Even if you already have some experience in programming, you will certainly learn something that you've never thought of before. For me, I had a much deeper understanding of the higher order function and the use of tail recursion to optimize recursion. What's more, the [python tutor](http://pythontutor.com/composingprograms.html#mode=edit) will help you clearly understand the logic behind program frame and variable bindings.
 
-By the way, I also highly recommend you to read the textbook written for this lesson(the link is above). It is adapted from the legendary book ----《SICP》. If you feel painful to read  《SICP》from head to tail, this book may be a good altenative.
+By the way, I also highly recommend you to read the textbook written for this lesson(the link is above). It is adapted from the legendary book ----《SICP》. If you feel painful to read  《SICP》from head to tail, this book may be a good alternative.
 
-At last, all the start codes and test program for homework, labs and projects are on the course website. You can download the for free. This repository contains my solution specified to the 2020 summer course. Hope this can help you. 
+At last, all the start codes and test program for homework, labs and projects are on the course website. You can download them for free. This repository contains my solution specified to the 2020 summer course. Hope this can help you. 
