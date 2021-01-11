@@ -28,3 +28,7 @@ I spent two weeks to finish all the homework, labs and projects. If you are a fr
 By the way, I also highly recommend you to read the textbook written for this lesson(the link is above). It is adapted from the legendary book ----《SICP》. If you feel painful to read  《SICP》from head to tail, this book may be a good alternative.
 
 At last, all the start codes and test program for homework, labs and projects are on the course website. You can download them for free. This repository contains my solution specified to the 2020 summer course. Hope this can help you. 
+
+### Wanna Learn More ?
+
+Check out [this repository](https://github.com/PKUFlyingPig/Self-learning-Computer-Science) which contains all my self-learning materials : )
