@@ -73,13 +73,13 @@ def insert_items(lst, entry, elem):
     True
     """
     "*** YOUR CODE HERE ***"
-    insert_lst = []
-    for i, x in enumerate(lst):
-        if x == entry:
-            insert_lst.append(i)
-    for i, ix in enumerate(insert_lst):
-        lst.insert(i + ix + 1, elem)
-    return lst
-
+    index = 0
+    size = len(lst)
+    while index < size:
+        if lst[index] == entry:
+            lst.insert(index + 1, elem)
+            index += 1
+            size += 1
+        index += 1
     return lst
 
