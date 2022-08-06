@@ -81,16 +81,15 @@
 
 
 (define (substitute s old new)
-	(if (null? s) nil
-		 (let ((head (car s)))
-		 (if (pair? head)
-		 	(cons (substitute head old new) (substitute (cdr s) old new))
-		 	(if (eq? head old)
-		 		(cons new (substitute (cdr s) old new))
-		 		(cons head (substitute (cdr s) old new))
-		 	)
-		 )
+	(if (null? s)
+	    nil
+	    (if (pair? (car s))
+		(cons (substitute (car s) old new) (substitute (cdr s) old new))
+		(if (eq? (car s) old)
+		    (cons new (substitute (cdr s) old new))
+		    (cons (car s) (substitute (cdr s) old new))
 		)
+	    )
 	)
 )
 
