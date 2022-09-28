@@ -101,8 +101,9 @@ def autocorrect(user_word, valid_words, diff_function, limit):
     "*** YOUR CODE HERE ***"
     if user_word in valid_words:
         return user_word
-    similar_word = min(valid_words, key=lambda w:diff_function(user_word, w, limit))
-    if diff_function(user_word, similar_word, limit) > limit:
+    words_diff = [diff_function(user_word, w, limit) for w in valid_words]
+    similar_word, similar_diff = min(zip(valid_words, words_diff), key=lambda item: item[1])
+    if similar_diff > limit:
         return user_word
     else:
         return similar_word
@@ -324,29 +325,30 @@ def memo(f):
 
 key_distance_diff = memo(key_distance_diff)
 key_distance_diff = count(key_distance_diff)
+memo_for_fa = {}
 
 def faster_autocorrect(user_word, valid_words, diff_function, limit):
     """A memoized version of the autocorrect function implemented above."""
 
     # BEGIN PROBLEM EC2
     "*** YOUR CODE HERE ***"
-    memo_for_fa = {}
-    if user_word in memo_for_fa:
-        return memo_for_fa[user_word]
+    idx = tuple([user_word, tuple(valid_words), diff_function, limit])
+    if user_word in valid_words:
+        return user_word
+    if idx in memo_for_fa:
+        return memo_for_fa[idx]
     else:
-        if user_word in valid_words:
+        # print("DEBUG: will is in the valid_words", "will" in valid_words)
+        # print("DEBUG: dist(woll, will) = ", diff_function(user_word, "will", limit))
+        # print("DEBUG: dist(woll, well) = ", diff_function(user_word, "well", limit))
+        words_diff = [diff_function(user_word, w, limit) for w in valid_words]
+        similar_word, similar_diff = min(zip(valid_words, words_diff), key=lambda item: item[1])
+        print("DEBUG:", similar_word)
+        if similar_diff > limit:
             ret = user_word
         else:
-            print("DEBUG: will is in the valid_words", "will" in valid_words)
-            print("DEBUG: dist(woll, will) = ", diff_function(user_word, "will", limit))
-            print("DEBUG: dist(woll, well) = ", diff_function(user_word, "well", limit))
-            similar_word = min(valid_words, key=lambda w:diff_function(user_word, w, limit))
-            print("DEBUG:", similar_word)
-            if diff_function(user_word, similar_word, limit) > limit:
-                ret = user_word
-            else:
-                ret = similar_word
-        memo_for_fa[user_word] = ret
+            ret = similar_word
+        memo_for_fa[idx] = ret
         return ret
     # END PROBLEM EC2
 
