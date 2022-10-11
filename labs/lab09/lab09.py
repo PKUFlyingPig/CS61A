@@ -92,10 +92,13 @@ def has_cycle(link):
     """
     "*** YOUR CODE HERE ***"
     p = link
+    visit_set = set()
     while p != Link.empty:
-        p = p.rest
-        if p is link:
+        if p in visit_set:
             return True
+        else:
+            visit_set.add(p)
+        p = p.rest
     return False
 
 
@@ -112,11 +115,15 @@ def has_cycle_constant(link):
     False
     """
     "*** YOUR CODE HERE ***"
-    p = link
-    while p != Link.empty:
-        p = p.rest
-        if p is link:
-            return True
+    p_slow, p_fast = link, link
+    while p_fast != Link.empty:
+        p_slow = p_slow.rest
+        if p_fast.rest != Link.empty:
+            p_fast = p_fast.rest.rest
+            if p_slow == p_fast:
+                return True
+        else:
+            break
     return False
 
 
