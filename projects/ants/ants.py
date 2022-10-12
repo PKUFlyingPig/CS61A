@@ -576,6 +576,10 @@ class Bee(Insect):
         # Extra credit: Special handling for bee direction
         # BEGIN EC
         "*** YOUR CODE HERE ***"
+        if self.direction == RIGHT:
+            destination = self.place.entrance
+            if isinstance(destination, Hive):
+                destination = self.place
         # END EC
         if self.blocked():
             self.sting(self.place.ant)
@@ -601,7 +605,10 @@ def make_slow(action, bee):
     """
     # BEGIN Problem EC
     "*** YOUR CODE HERE ***"
-
+    def slow_action(gamestate):
+        if gamestate.time % 2 == 0:
+            action(gamestate)
+    return slow_action
     # END Problem EC
 
 def make_scare(action, bee):
@@ -611,12 +618,29 @@ def make_scare(action, bee):
     """
     # BEGIN Problem EC
     "*** YOUR CODE HERE ***"
+    def scare_action(gamestate):
+        bee.direction = RIGHT
+        action(gamestate)
+        bee.direction = LEFT
+    return scare_action
     # END Problem EC
 
 def apply_status(status, bee, length):
     """Apply a status to a BEE that lasts for LENGTH turns."""
     # BEGIN Problem EC
     "*** YOUR CODE HERE ***"
+    original_action = bee.action
+    new_action = status(bee.action, bee)
+
+    def alt_status(gamestate):
+        nonlocal length
+        if length > 0:
+            new_action(gamestate)
+            length -= 1
+        else:
+            original_action(gamestate)
+
+    bee.action = alt_status
     # END Problem EC
 
 
@@ -646,6 +670,9 @@ class ScaryThrower(ThrowerAnt):
     def throw_at(self, target):
         # BEGIN Problem EC
         "*** YOUR CODE HERE ***"
+        if target and not target.scared:
+            apply_status(make_scare, target, 2)
+            target.scared = True
         # END Problem EC
 
 class LaserAnt(ThrowerAnt):
@@ -654,8 +681,9 @@ class LaserAnt(ThrowerAnt):
     name = 'Laser'
     food_cost = 10
     # OVERRIDE CLASS ATTRIBUTES HERE
+    damage = 2
     # BEGIN Problem OPTIONAL
-    implemented = False   # Change to True to view in the GUI
+    implemented = True   # Change to True to view in the GUI
     # END Problem OPTIONAL
 
     def __init__(self, armor=1):
@@ -664,12 +692,23 @@ class LaserAnt(ThrowerAnt):
 
     def insects_in_front(self, beehive):
         # BEGIN Problem OPTIONAL
-        return {}
+        distance = 0
+        insects_dic = dict()
+        place = self.place
+        while not isinstance(place.entrance, Hive):
+            if place.ant and not isinstance(place.ant, LaserAnt):
+                insects_dic[place.ant] = distance
+            for bee in place.bees:
+                insects_dic[bee] = distance
+            place = place.entrance
+            distance += 1
+        return insects_dic
         # END Problem OPTIONAL
 
     def calculate_damage(self, distance):
         # BEGIN Problem OPTIONAL
-        return 0
+        damage_val = self.damage - distance * 0.2 - 0.05 * self.insects_shot
+        return damage_val if damage_val > 0 else 0
         # END Problem OPTIONAL
 
     def action(self, gamestate):
