@@ -50,11 +50,10 @@ test = {
           'code': r"""
           >>> from ants import *
           >>> LaserAnt.implemented
-          c7a88a0ffd3aef026b98eef6e7557da3
-          # locked
+          True
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         }
       ],
       'scored': True,
