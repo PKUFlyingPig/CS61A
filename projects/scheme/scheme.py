@@ -78,11 +78,11 @@ def eval_all(expressions, env):
     # BEGIN PROBLEM 7
     if expressions is nil:
         return None
-    expressions = expressions.map(lambda x:scheme_eval(x, env))
     ptr = expressions
     while ptr.rest is not nil:
+        scheme_eval(ptr.first, env)
         ptr = ptr.rest
-    return ptr.first
+    return scheme_eval(ptr.first, env, True)
     # END PROBLEM 7
 
 ################
@@ -366,7 +366,7 @@ def do_and_form(expressions, env):
         return True
     ptr = expressions 
     while ptr is not nil:
-        value = scheme_eval(ptr.first, env)
+        value = scheme_eval(ptr.first, env, True if ptr.rest is nil else False)
         if is_false_primitive(value):
             return False
         ptr = ptr.rest
@@ -392,7 +392,7 @@ def do_or_form(expressions, env):
         return False
     ptr = expressions
     while ptr is not nil:
-        value = scheme_eval(ptr.first, env)
+        value = scheme_eval(ptr.first, env, True if ptr.rest is nil else False)
         if is_true_primitive(value):
             return value
         ptr = ptr.rest
@@ -684,7 +684,7 @@ def optimize_tail_calls(prior_eval_function):
         # BEGIN
         "*** YOUR CODE HERE ***"
         while isinstance(result, Thunk):
-            result = prior_eval_function(result.expr, env)
+            result = prior_eval_function(result.expr, result.env)
         return result
         # END
     return optimized_eval
