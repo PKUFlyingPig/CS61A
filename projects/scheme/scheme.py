@@ -41,7 +41,7 @@ def scheme_eval(expr, env, _=None): # Optional third argument is ignored
         validate_procedure(operator)
         if isinstance(operator, MacroProcedure):
             print("DEBUG: apply_macro", rest, env)
-            return operator.apply_macro(rest, env)
+            return scheme_eval(operator.apply_macro(rest, env), env)
         operands = rest.map(lambda x : scheme_eval(x, env))
         return scheme_apply(operator, operands, env)
         # END PROBLEM 4
