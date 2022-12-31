@@ -13,7 +13,7 @@
 
 (define-macro (switch expr cases)
 	 (cons 'cond 
-	   (map (lambda (case) (cons (list 'eq? expr (car case)) (cdr case))) 
+	   (map (lambda (case) (cons (eq? (eval expr) (car case)) (cdr case))) 
     			cases))
 )
 (define x 'b)
