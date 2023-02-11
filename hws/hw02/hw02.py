@@ -31,12 +31,10 @@ def product(n, term):
     162
     """
     "*** YOUR CODE HERE ***"
-    assert isinstance(n, int) and n > 0, 'n must be a positive integer'
-    prod, i = 1, 1
-    while i <= n:
-        prod, i = prod * term(i), i + 1
-    return prod
-
+    if n==1:
+        return term(1)
+    else:
+        return product(n-1,term)*term(n)
 
 def accumulate(combiner, base, n, term):
     """Return the result of combining the first n terms in a sequence and base.
@@ -53,20 +51,24 @@ def accumulate(combiner, base, n, term):
     25
     >>> accumulate(mul, 2, 3, square)    # 2 * 1^2 * 2^2 * 3^2
     72
-    >>> accumulate(lambda x, y: x + y + 1, 2, 3, square)
+    >>> accumulate(lambda x, y: x + y + 1, 2, 3, square) #
     19
-    >>> accumulate(lambda x, y: 2 * (x + y), 2, 3, square)
+    >>> accumulate(lambda x, y: 2 * (x + y), 2, 3, square) #
     58
-    >>> accumulate(lambda x, y: (x + y) % 17, 19, 20, square)
+    >>> accumulate(lambda x, y: (x + y) % 17, 19, 20, square)  #
     16
     """
     "*** YOUR CODE HERE ***"
-    acc, i = base, 1
-    while i <= n:
-        acc, i = combiner(acc, term(i)), i+1
-    return acc
+    if n==0:
+        return base
+    if n==1:
+        return combiner(base,term(1))
+    else:
+        return combiner(accumulate(combiner,base,n-1,term),term(n))
 
 
+         
+        
 def summation_using_accumulate(n, term):
     """Returns the sum of term(1) + ... + term(n). The implementation
     uses accumulate.
@@ -82,8 +84,8 @@ def summation_using_accumulate(n, term):
     True
     """
     "*** YOUR CODE HERE ***"
-    return accumulate(add, 0, n, term)
-    
+    return accumulate(add,0,n,term)
+
 
 def product_using_accumulate(n, term):
     """An implementation of product using accumulate.
@@ -99,16 +101,13 @@ def product_using_accumulate(n, term):
     True
     """
     "*** YOUR CODE HERE ***"
-    return accumulate(mul, 1, n, term)
-
+    return accumulate(mul,1,n,term)
 
 def compose1(func1, func2):
     """Return a function f, such that f(x) = func1(func2(x))."""
     def f(x):
         return func1(func2(x))
     return f
-
-
 def make_repeater(func, n):
     """Return the function that computes the nth application of func.
 
@@ -125,8 +124,12 @@ def make_repeater(func, n):
     5
     """
     "*** YOUR CODE HERE ***"
-    return accumulate(compose1, identity, n, lambda x: func)
-
+    if n==0:
+        return identity
+    if n==1:
+        return func
+    else:
+        return compose1(make_repeater(func,n-1),func)
 
 def zero(f):
     return lambda x: x
@@ -137,16 +140,12 @@ def successor(n):
 def one(f):
     """Church numeral 1: same as successor(zero)"""
     "*** YOUR CODE HERE ***"
-    def fx(x):
-        return f(x)
-    return fx
+    return lambda x:f(x)
+
 def two(f):
     """Church numeral 2: same as successor(successor(zero))"""
     "*** YOUR CODE HERE ***"
-    def ffx(x):
-        return f(f(x))
-    return ffx
-
+    return lambda x:f(f(x))
 three = successor(two)
 
 def church_to_int(n):
@@ -162,9 +161,7 @@ def church_to_int(n):
     3
     """
     "*** YOUR CODE HERE ***"
-    def add1(x):
-        return x+1
-    return n(add1)(0)
+    return n(lambda x:x+1)(0)
 
 def add_church(m, n):
     """Return the Church numeral for m + n, for Church numerals m and n.
@@ -173,12 +170,7 @@ def add_church(m, n):
     5
     """
     "*** YOUR CODE HERE ***"
-    int_n = church_to_int(n)
-    for i in range(int_n):
-        m = successor(m)
-    return m
-
-
+    return lambda f: lambda x: m(f)(n(f)(x))
 def mul_church(m, n):
     """Return the Church numeral for m * n, for Church numerals m and n.
 
@@ -189,11 +181,7 @@ def mul_church(m, n):
     12
     """
     "*** YOUR CODE HERE ***"
-    ans = zero
-    int_n = church_to_int(n)
-    for i in range(int_n):
-        ans = add_church(ans, m)
-    return ans
+    return lambda f :m(n(f))
 
 def pow_church(m, n):
     """Return the Church numeral m ** n, for Church numerals m and n.
@@ -204,10 +192,6 @@ def pow_church(m, n):
     9
     """
     "*** YOUR CODE HERE ***"
-    ans = one
-    int_n = church_to_int(n)
-    for i in range(int_n):
-        ans = mul_church(ans, m)
-    return ans
-    
+    return n(m)
+
 
