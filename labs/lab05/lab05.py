@@ -181,7 +181,7 @@ def add_trees(t1, t2):
         return tree(label(t1) + label(t2), branches(t1))
     else:
         fewer_branch_t, more_branch_t = sorted([branches(t1), branches(t2)], key=len)
-        pad_t1 = fewer_branch_t + [tree(0) for i in range(len(more_branch_t) - len(fewer_branch_t))]
+        pad_t1 = fewer_branch_t + [tree(i) for i in range(len(more_branch_t) - len(fewer_branch_t))]
         pad_t2 = more_branch_t
         return tree(label(t1) + label(t2),\
                 [add_trees(b1, b2) for b1, b2 in zip(pad_t1, pad_t2)])
