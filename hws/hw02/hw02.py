@@ -189,11 +189,14 @@ def mul_church(m, n):
     12
     """
     "*** YOUR CODE HERE ***"
-    ans = zero
-    int_n = church_to_int(n)
-    for i in range(int_n):
-        ans = add_church(ans, m)
-    return ans
+    # ans = zero
+    # int_n = church_to_int(n)
+    # for i in range(int_n):
+    #     ans = add_church(ans, m)
+    # return ans
+    def temp(x):
+        return n(m(x))
+    return temp
 
 def pow_church(m, n):
     """Return the Church numeral m ** n, for Church numerals m and n.
@@ -204,10 +207,14 @@ def pow_church(m, n):
     9
     """
     "*** YOUR CODE HERE ***"
-    ans = one
-    int_n = church_to_int(n)
-    for i in range(int_n):
-        ans = mul_church(ans, m)
-    return ans
+    # ans = one
+    # int_n = church_to_int(n)
+    # for i in range(int_n):
+    #     ans = mul_church(ans, m)
+    # return ans
+    def temp(x):
+        return n(m)(x)
+    return temp
+
     
 
